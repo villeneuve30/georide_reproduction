@@ -1,0 +1,315 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+h1,h2,h3,h4,h5,h6,button,p,a,div{
+    font-family: "Muli",sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** --------------------  css reset  ----------------------- **/
+.menu{
+    position:fixed;
+    max-height: 0;
+    left:0;
+    top:0;
+    height:40vh;
+    width:100%;
+    z-index:9;
+    background:#393939;
+    height:100vh;
+    overflow: hidden;
+}
+.croix_menu{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    width:30px;
+    height: 30px;
+    justify-content: space-around;
+}
+
+.croix_menu>span{
+    background: white;
+    height: 3px;
+    width: 100%;
+}
+.croix_menu:nth-child(0){
+    transform: rotate(45deg);
+}
+.croix_menu:nth-child(1){
+    transform: rotate(-45deg);
+}
+.menu_nav{
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu_li{
+    font-size:1.2em;
+    margin-bottom:1rem;
+    
+}
+.menu_li>a{
+    color:white;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 1px;
+}
+.menu_li>a:hover{
+    color:#ffad00;
+
+    transition: color 0.3s;
+}
+.logo_menu{
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
+}
+header{
+    position: sticky;
+    top:0;
+    width:100%;
+    background-color:#232323;
+    height: 10vh;
+    z-index:100;
+}
+.header_parent{
+    position: relative;
+    width: 100%;
+}
+.logo_georide{
+    display: inline-block;
+    padding: 1em 0 0 1em;
+    max-width: 20%;
+    min-width: 10rem;
+}
+.hamburger_svg{
+    display: inline-block;
+    height: 100%;
+    width:2rem;
+    fill: #ffad00;
+    position:absolute;
+    right: 1rem;
+    top:0.5rem
+}
+
+.hamburger_svg:hover{
+    fill:white;
+    cursor: pointer;
+    transition: fill 3s 3s 3s;
+}
+.block_1{
+    position: relative;
+    background: url("img/block_1-image.jpg");
+    background-size:cover;
+    height: 53vh;
+}
+.block_1-label{
+    width:57%;
+    padding: 4rem 0 1rem 2rem;
+    font-size: 1.9rem;
+    letter-spacing: 0;
+    font-weight: 900;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+    line-height: 1.19;
+}
+.btn_general{
+    border-radius: 20px 20px 20px 20px;
+    width:11rem;
+    height: 40px;
+    background-color: #ffad00;
+    padding: 0;
+    border: none;
+    font-size:110%;
+}
+.block_1-button{
+    margin-top:5%; 
+    margin-left:2rem;
+}
+.btn_general:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    transition: all .5s;
+}
+.block_2-triple_gif{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.block_2-gif{
+    max-width: 90%;
+    padding: 4rem 0 2rem 0;
+}
+.block_2-label{
+    font-weight:bold;
+}
+.block_2-texte{
+    padding:2rem 0;
+}
+
+@keyframes bounce {
+from,
+20%,
+53%,
+80%,
+to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+40%,
+43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+}
+
+70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+}
+
+90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+}
+}
+.bounce {
+-webkit-animation-name: bounce;
+animation-name: bounce;
+-webkit-transform-origin: center bottom;
+transform-origin: center bottom;
+}
+
+.notif{
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.block_2-element_2, .block_2-element_3{
+    position: relative;
+}
+.block_2-element_2-notif, .block_2-element_3-notif{
+    width: 100%;
+    max-width: 28rem;
+    animation: bounce 2s infinite;
+}
+
+.block_3{
+    position: relative;
+    background: #232323;
+    height:150vh;
+    color:#818383;
+    z-index: 1;
+}
+.block_3-contenu{
+    padding: 3rem 0 3rem 3rem;
+}
+.block_3 h2{
+    font-size:2.5em;
+    color:white;
+}
+.block_3-titreGeoride{
+    font-size:6em;
+    color:white;
+    margin-bottom: 2rem;
+}
+.block_3-texte strong{
+    color: white;
+}
+.block_3-texte{
+    width:70%;
+    margin-bottom: 2rem;
+    font-size: 120%;
+    line-height: 1.4;
+}
+.btn_black{
+    background: #383838;
+    color:white;
+    height:3rem;
+}
+.btn_black:hover{
+    background: #ffad00;
+    color:black;
+}
+.block_3-img_boitier{
+    display: block;
+    width:80%;
+    margin: auto;
+    animation: slideInDown alternate 2s infinite;
+}
+@keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+  }
+
+@media (min-width:767px){
+  .block_3-titreGeoride{
+      font-size: 10em;
+  }
+}
+
+
