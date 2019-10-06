@@ -5,7 +5,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label,strong, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
@@ -27,7 +27,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    overflow-x: hidden;
+}
+html{
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -45,6 +49,45 @@ table {
 	border-spacing: 0;
 }
 /** --------------------  css reset  ----------------------- **/
+h1{
+    font-size:6em;
+    color:white;
+}
+h2{
+    color:black;
+    font-size: 1.9rem;
+    line-height: 1.19;
+    letter-spacing: 0;
+    font-weight: 900;
+    font-style: normal;
+}
+h3{
+    font-weight:bold; 
+}
+p{
+    color:#666B6D;
+    font-size:13px;
+    letter-spacing: 0px;
+}
+.btn_general{
+    border-radius: 20px 20px 20px 20px;
+    width:9rem;
+    height: 40px;
+    background-color: #ffad00;
+    padding: 0;
+    border: none;
+    font-size:80%;
+    z-index: 999;
+}
+.btn_general:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all .5s;
+}
+.menu_desktop{
+    display: none;
+}
 .menu{
     position:fixed;
     max-height: 0;
@@ -58,12 +101,15 @@ table {
     overflow: hidden;
 }
 .croix_menu{
-    position:relative;
+    position:absolute;
+    top:20px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     width:30px;
     height: 30px;
     justify-content: space-around;
+    cursor: pointer;
 }
 
 .croix_menu>span{
@@ -71,11 +117,12 @@ table {
     height: 3px;
     width: 100%;
 }
-.croix_menu:nth-child(0){
+#span2{
     transform: rotate(45deg);
 }
-.croix_menu:nth-child(1){
+#span1{
     transform: rotate(-45deg);
+    margin-top:1.75rem;
 }
 .menu_nav{
     display: block;
@@ -84,6 +131,9 @@ table {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.menu_ul{
+    
 }
 .menu_li{
     font-size:1.2em;
@@ -148,47 +198,25 @@ header{
 .block_1-label{
     width:57%;
     padding: 4rem 0 1rem 2rem;
-    font-size: 1.9rem;
-    letter-spacing: 0;
-    font-weight: 900;
-    font-style: normal;
-    text-decoration: none;
-    text-transform: none;
-    line-height: 1.19;
 }
-.btn_general{
-    border-radius: 20px 20px 20px 20px;
-    width:11rem;
-    height: 40px;
-    background-color: #ffad00;
-    padding: 0;
-    border: none;
-    font-size:110%;
-}
+
 .block_1-button{
     margin-top:5%; 
     margin-left:2rem;
 }
-.btn_general:hover{
-    background-color: black;
-    color: white;
-    cursor: pointer;
 
-    transition: all .5s;
-}
 .block_2-triple_gif{
     text-align: center;
     margin-bottom: 3rem;
 }
 .block_2-gif{
-    max-width: 90%;
+    max-width: 70%;
     padding: 4rem 0 2rem 0;
-}
-.block_2-label{
-    font-weight:bold;
 }
 .block_2-texte{
     padding:2rem 0;
+    max-width: 70%;
+    margin: auto;
 }
 
 @keyframes bounce {
@@ -232,45 +260,40 @@ transform-origin: center bottom;
 
 .notif{
     position: absolute;
-    top:60%;
+    top:55%;
     left:50%;
     transform: translate(-50%,-50%);
 }
-.block_2-element_2, .block_2-element_3{
+.block_2-element{
     position: relative;
 }
-.block_2-element_2-notif, .block_2-element_3-notif{
-    width: 100%;
-    max-width: 28rem;
+.block_2-element-notif{
+    width: 90%;
+    max-width: 20rem;
     animation: bounce 2s infinite;
 }
 
 .block_3{
     position: relative;
-    background: #232323;
-    height:150vh;
+    background: url("img/background_block3.jpg");
+    background-size: cover ; 
+    height:135vh;
     color:#818383;
-    z-index: 1;
 }
 .block_3-contenu{
     padding: 3rem 0 3rem 3rem;
+    z-index: 10;
 }
 .block_3 h2{
     font-size:2.5em;
     color:white;
 }
 .block_3-titreGeoride{
-    font-size:6em;
-    color:white;
     margin-bottom: 2rem;
-}
-.block_3-texte strong{
-    color: white;
 }
 .block_3-texte{
     width:70%;
     margin-bottom: 2rem;
-    font-size: 120%;
     line-height: 1.4;
 }
 .btn_black{
@@ -283,6 +306,9 @@ transform-origin: center bottom;
     color:black;
 }
 .block_3-img_boitier{
+    overflow: hidden;
+    z-index: 11;
+    position: relative;
     display: block;
     width:80%;
     margin: auto;
@@ -306,9 +332,121 @@ transform-origin: center bottom;
     animation-name: slideInDown;
   }
 
+  #block_4{
+      padding-left: 2rem;
+      background: white;
+      position: relative;
+      margin: auto;
+      padding-top:2rem;
+      z-index: 15;
+      background: #f4f4f4;
+  }
+    #block_4_informations>p,#block_4_informations>h2{
+        margin-bottom: 2rem;
+    }
+  #block_4_img{
+      bottom:0;
+      max-width: 20rem;
+      max-height: 20rem;
+  }
+  #block_4>p{
+      margin: 2rem 0;
+  }
+
+  #slider_ul{
+    display:flex;
+    width:200%;
+    overflow: hidden;
+    animation: anim 25s infinite;
+    }
+    #slider_ul>li{
+        width: 33%;
+    }
+    #slider_ul>li:hover{
+        opacity:0.5;
+        cursor:pointer;
+        transition: all 0.5s;
+    }
+@keyframes anim{
+    0% { transform: translate(-0%);}
+    18% { transform: translate(-18%);}
+    34% { transform: translate(-34%);}
+    50% { transform: translate(-50%);}
+}
+.top_img{
+    width:100%;
+}
+
 @media (min-width:767px){
+    .menu_desktop{
+        display: inline-block;
+        width: 60%;
+        /*! top:0; */
+        position: absolute;
+        padding: 2em 0 0 2em;
+    }
+    .menu_desktop_ul{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .menu_desktop_li>a{
+        text-decoration: none;
+        color:#9A9A9A;
+        font-weight:bold;
+    }
+    .menu_desktop_li>a:hover{
+        color:white;
+    }
+    .hamburger_svg{
+        display: none;
+    }
+    .menu{
+        height: 0;
+    }
+    .block_2-triple_gif{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .block_2-element{
+        width:33%;
+    }
+    .block_2-texte{
+        max-width: 90%;
+    }
+    .block_2-gif{
+        max-width: 100%;
+    }
+    .notif{
+        width: 70%;
+        top:48%;
+        left:50%;
+    }
+  .block_3-img_boitier{
+    width: 30rem;
+   }
   .block_3-titreGeoride{
       font-size: 10em;
+  }
+  #block_4{
+      height: 40vh;
+      display: flex;
+      flex-direction: row-reverse;
+  }
+  #block_4_informations{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      justify-content: space-around;
+  }
+  #block_4_btn{
+      width:15rem;
+  }
+  #block_4_img{
+      bottom:0;
+      max-width:20rem;
+      max-height: 20rem;
   }
 }
 

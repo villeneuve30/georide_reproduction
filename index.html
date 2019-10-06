@@ -12,8 +12,8 @@
 <header>
         <div class="menu">
             <div class="croix_menu">
-                <span></span>
-                <span></span>
+                <span id="span1"></span>
+                <span id="span2"></span>
             </div>
             <a href="#" class="logo_menu"><img src="img/logo.png" alt="logo"></a>
             <nav class="menu_nav">
@@ -31,58 +31,85 @@
     <div class="header_parent">
         <a href="/"><img class="logo_georide" src="img/logo.png" alt="logo_georide"/></a>
         <svg class="hamburger_svg" height="32px" viewBox="0 0 32 32" width="32px"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+        <div class="menu_desktop">
+                <ul class="menu_desktop_ul">
+                        <li class="menu_desktop_li"><a class="test" href="#">Le boîtier</a></li>
+                        <li class="menu_desktop_li"><a href="#">L'application</a></li>
+                        <li class="menu_desktop_li"><a href="#">Acheter Georide</a></li>
+                        <li class="menu_desktop_li"><a href="#">Avis clients</a></li>
+                        <li class="menu_desktop_li"><a href="#">Le blog</a></li>
+                </ul>
+        </div>
     </div>
+   
 </header>
-<div id="main">
+<main id="main">
     <div class="block_1">
-        <h1 class="block_1-label">Le meilleur moyen de
+        <h2 class="block_1-label">Le meilleur moyen de
             protéger et connecter
-            sa moto.</h1>
+            sa moto.</h2>
         <button class="block_1-button btn_general">Découvrir GeoRide</button>
     </div>
 
-    <div class="block_2-triple_gif">
-        <div class="block_2-element_1">
+    <section class="block_2-triple_gif">
+        <div class="block_2-element">
             <img class="block_2-gif" src="img/block_2-gif.gif" alt="gif explication"/>
-            <h2 class="block_2-label">Tracker GPS</h2>
+            <h3>Tracker GPS</h3>
             <p class="block_2-texte">Localisez votre moto en temps réel et revivez vos plus belles balades depuis l'appli.</p>
             <button class="btn_general">En savoir plus</button>
         </div>
 
-        <div class="block_2-element_2">
+        <div class="block_2-element">
             <img class="block_2-gif" src="img/block_2-element_2.jpg" alt="gif explication"/>
-            <h2 class="block_2-label">Alarme connectée</h2>
+            <h3>Alarme connectée</h3>
             <p class="block_2-texte">Soyez prévenu immédiatement si une personne malveillante monte sur votre moto.</p>
             <button class="btn_general">En savoir plus</button>
             <div class="notif">
-                <img class="block_2-element_2-notif" src="img/block_2-element_2-notif.png"/>
+                <img class="block_2-element-notif" src="img/block_2-element_2-notif.png"/>
             </div>
         </div>
 
-        <div class="block_2-element_3">
+        <div class="block_2-element">
             <img class="block_2-gif" src="img/block_2-element_3.jpg" alt="gif explication"/>
-            <h2 class="block_2-label">Détecteur de chute</h2>
+            <h3>Détecteur de chute</h3>
             <p class="block_2-texte">GeoRide détecte les chutes peu importe la vitesse et prévient vos proches si vous ne signalez pas votre état.</p>
             <button class="btn_general">En savoir plus</button>
             <div class="notif">
-                <img class="block_2-element_3-notif" src="img/block_2-element_2-notif.png"/>
+                <img class="block_2-element-notif" src="img/block_2-element_3-notif.png"/>
             </div>
         </div>
-    </div>
-    <div class="block_3">
+    </section>
+    <section class="block_3">
         <div class="block_3-contenu">
-            <h2><strong>Le boîtier</strong></h2>
-            <h1 class="block_3-titreGeoride"><strong>GeoRide</strong></h1>
-            <p class="block_3-texte"><strong>Un seul boîtier</strong> pour localiser votre moto, 
+            <h2>Le boîtier</h2>
+            <h1 class="block_3-titreGeoride">GeoRide</h1>
+            <p class="block_3-texte">Un seul boîtier pour localiser votre moto, 
             recevoir une alerte en cas de mouvement et prévenir vos proches en cas de chute.</p>
-            <p class="block_3-texte">Disponible en <strong>France</strong> et dans <strong>31 pays en Europe</strong>,
+            <p class="block_3-texte">Disponible en France et dans 31 pays en Europe,
             GeoRide se connecte facilement à la batterie de votre moto.
             </p>
             <button class="btn_general btn_black">En savoir plus</button>
-
-            <img class="block_3-img_boitier"src="img/boitier.png"/>
         </div>
-    </div>
-</div>
+        <img class="block_3-img_boitier"src="img/boitier.png"/>
+    </section>
+    <section id="block_4">
+        <div id="block_4_informations">
+            <h2>Connecté à notre puissante application</h2>
+            <p>Votre moto est dans votre poche grâce à l'application GeoRide.
+                Disponible sur iOS et Android, c'est la plus complète et performante du marché !
+                </p>
+            <button id="block_4_btn" class="btn_general btn_black">Découvrir l'application</button>
+        </div>
+        <img id="block_4_img" src="img/block_4-gif.gif" alt="gif">
+    </section>
+    <ul id="slider_ul">
+        <li class="slider_li"><img class="top_img" src="img/logo_virage.png" alt="image roulement"></li>
+        <li class="slider_li"><img class="top_img" src="img/logo_virage.png" alt="image roulement"></li>
+        <li class="slider_li"><img class="top_img" src="img/logo_virage.png" alt="image roulement"></li>
+        <li class="slider_li"><img class="top_img" src="img/logo_virage.png" alt="image roulement"></li>
+        <li class="slider_li"><img class="top_img" src="img/logo_virage.png" alt="image roulement"></li>
+        <li class="slider_li"><img class="top_img" src="img/logo_virage.png" alt="image roulement"></li>
+    </ul>
+</main>
 </body>
 </html>

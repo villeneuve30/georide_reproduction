@@ -1,14 +1,10 @@
 $(document).ready(function(){
-    var bool = false;
+    
     var menu = $(".hamburger_svg");
-    menu.on('click', function(){
-        if(!bool){
-            afficherMenu();
-        }else{
-            byeMenu();
-        }
-        bool = !bool;
-    });
+    menu.on('click', afficherMenu);
+
+    var croixMenu = $('.croix_menu');
+    croixMenu.on('click',byeMenu);
     
 }); 
 function afficherMenu(){
