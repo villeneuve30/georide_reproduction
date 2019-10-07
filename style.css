@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
     overflow-x: hidden;
-}
+} 
 html{
     overflow-x: hidden;
 }
@@ -49,10 +49,6 @@ table {
 	border-spacing: 0;
 }
 /** --------------------  css reset  ----------------------- **/
-h1{
-    font-size:6em;
-    color:white;
-}
 h2{
     color:black;
     font-size: 1.9rem;
@@ -66,12 +62,20 @@ h3{
 }
 p{
     color:#666B6D;
-    font-size:13px;
+    font-size:15px;
     letter-spacing: 0px;
 }
+strong{
+    font-weight: bold;
+}
+.strong_white{
+    color:white;
+}
+.strong_black{
+    color:black;
+}
 .btn_general{
-    border-radius: 20px 20px 20px 20px;
-    width:9rem;
+    border-radius: 30px;
     height: 40px;
     background-color: #ffad00;
     padding: 0;
@@ -79,11 +83,30 @@ p{
     font-size:80%;
     z-index: 999;
 }
+.btn_orange{
+ width:8rem;
+}
+.btn_black{
+
+}
+.block_1-button{
+    width:12rem;
+}
 .btn_general:hover{
     background-color: black;
     color: white;
     cursor: pointer;
     transition: all .5s;
+}
+.btn_black{
+    width:10rem;
+    background: #383838;
+    color:white;
+    height:2.5rem;
+}
+.btn_black:hover{
+    background: #ffad00;
+    color:black;
 }
 .menu_desktop{
     display: none;
@@ -168,6 +191,36 @@ header{
     position: relative;
     width: 100%;
 }
+#logo_header{
+    display: flex;
+    height: 100%;
+    width:17rem;
+    position:absolute;
+    right: 1rem;
+    top:0.5rem;
+    justify-content: left;
+}
+#logo_header{
+    display:none;
+}
+#logo_header>svg{
+    fill: #ffad00;
+    width:30px;
+    height:30px;
+    margin-right: 2rem;
+    padding-top:1rem;
+}
+#logo_header>svg:hover{
+    fill: white;
+    transition: all 0.5s;
+}
+#logo_header>a{
+    text-decoration: none;
+    margin-right: 2rem;
+    padding-top:1.5rem;
+    color:white;
+    font-size:20px;
+}
 .logo_georide{
     display: inline-block;
     padding: 1em 0 0 1em;
@@ -181,7 +234,7 @@ header{
     fill: #ffad00;
     position:absolute;
     right: 1rem;
-    top:0.5rem
+    top:0.5rem;
 }
 
 .hamburger_svg:hover{
@@ -197,11 +250,18 @@ header{
 }
 .block_1-label{
     width:57%;
-    padding: 4rem 0 1rem 2rem;
+    padding: 4rem 0 0 2rem;
+}
+.block_1>span{
+    display:block;
+    height:4px;
+    border-radius: 2px;
+    background: #ffad00;
+    width:2rem;
+    margin:1rem 0 1rem 2rem;
 }
 
 .block_1-button{
-    margin-top:5%; 
     margin-left:2rem;
 }
 
@@ -272,6 +332,15 @@ transform-origin: center bottom;
     max-width: 20rem;
     animation: bounce 2s infinite;
 }
+.block_2-element>span{
+    display:block;
+    height:4px;
+    border-radius: 2px;
+    background: #ffad00;
+    width:2rem;
+    margin:auto;
+    margin-top:1rem; 
+}
 
 .block_3{
     position: relative;
@@ -284,27 +353,29 @@ transform-origin: center bottom;
     padding: 3rem 0 3rem 3rem;
     z-index: 10;
 }
-.block_3 h2{
+.block_3-contenu>span{
+    display:block;
+    background: #ffad00;
+    height:4px;
+    width:3rem;
+    margin-bottom: 3rem;
+    border-radius: 2px;
+}
+.block_3-contenu>h2{
     font-size:2.5em;
     color:white;
 }
 .block_3-titreGeoride{
     margin-bottom: 2rem;
+    font-size:6.5em;
+    color:white;
 }
 .block_3-texte{
     width:70%;
     margin-bottom: 2rem;
     line-height: 1.4;
 }
-.btn_black{
-    background: #383838;
-    color:white;
-    height:3rem;
-}
-.btn_black:hover{
-    background: #ffad00;
-    color:black;
-}
+
 .block_3-img_boitier{
     overflow: hidden;
     z-index: 11;
@@ -341,13 +412,19 @@ transform-origin: center bottom;
       z-index: 15;
       background: #f4f4f4;
   }
-    #block_4_informations>p,#block_4_informations>h2{
+    #block_4_informations>h2{
         margin-bottom: 2rem;
+    }
+    #block_4_informations>button{
+        margin-top: 2rem;
+    }
+    #block_4_informations>p{
+        line-height:2;
     }
   #block_4_img{
       bottom:0;
-      max-width: 20rem;
-      max-height: 20rem;
+      max-width: 100%;
+      /*! max-height: 20rem; */
   }
   #block_4>p{
       margin: 2rem 0;
@@ -387,43 +464,93 @@ transform-origin: center bottom;
     width:100%;
 }
 footer{
-    padding:8em 0 10em 5em;
+    padding:8rem 5rem 3rem 5rem;
     display: flex;
     flex-wrap: wrap;
     background:#232323;
-    height: 50vh;
 }
 .logo_footer{
     padding-bottom: 2rem;
 }
+#reseau_sociaux{
+    display: flex;
+}
+.rond_reseaux{
+    display: flex;
+    background: #393939;
+    border-radius: 20px;
+    width:40px;
+    height:40px;
+    justify-content: center;
+    margin: 1rem 0.5rem 0 0;
+}
+.rond_reseaux>svg{
+    fill:white;
+    width:50%;
+    height:50%;
+    margin-top:10px;
+}
+.rond_reseaux:hover{
+    background:#ffad00;
+    transition:all 0.2s;
+}
+.span_footer{
+    display: block;
+    height:2px;
+    background: #393939;
+}
 .section_footer{
     width:40%;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 .section_footer>h4{
     color:white;
     font-weight: bold;
     padding-bottom: 2rem;
 }
-/*
-.section_footer>li{
-    list-style-type: circle;
-    text-decoration:none;
-    color:#C4C7C7;
-}*/
+.section_footer>p{
+    color:#C7C7C7;
+    line-height: 2;
+    width: 90%;
+}
+.ul_footer>li{
+    margin-bottom: 0.5rem;
+}
+.ul_footer>li>a{
+    text-decoration: none;
+    color:#C7C7C7;
+}
+.ul_footer>li>a:hover{
+    color:white;
+    transition:all 0.2s;
+}
+.ul_footer>li:before {
+    margin-right: 1rem;
+    content: "\2022";
+    float: left;
+    color: #ffad00;
+}
+.span_desktop{
+    display:none;
+}
 
 @media (min-width:767px){
     .menu_desktop{
         display: inline-block;
         width: 60%;
-        /*! top:0; */
         position: absolute;
         padding: 2em 0 0 2em;
     }
     .menu_desktop_ul{
         display: flex;
-        justify-content: space-around;
+        justify-content: left;
         flex-direction: row;
+    }
+    .menu_desktop_ul>li{
+        padding-right:2rem;
+    }
+    #logo_header{
+        display:flex;
     }
     .menu_desktop_li>a{
         text-decoration: none;
@@ -432,12 +559,29 @@ footer{
     }
     .menu_desktop_li>a:hover{
         color:white;
+        transition: all 0.5s;
     }
     .hamburger_svg{
         display: none;
     }
     .menu{
         height: 0;
+    }
+    .block_1{
+        height:85vh;
+    }
+    .block_1-label{
+        font-size:50px;
+        width:42%;
+        padding-left:10rem;
+    }
+    .block_1>span{
+        margin:2rem 0 2rem 10rem;
+    }
+    .block_1-button{
+        padding:0;
+        margin:0;
+        margin-left:10rem;
     }
     .block_2-triple_gif{
         display: flex;
@@ -458,12 +602,22 @@ footer{
         top:48%;
         left:50%;
     }
+    .block_3{
+        height:90vh;
+    }
   .block_3-img_boitier{
     width: 30rem;
+    position: absolute;
+    display: inline-block;
+    top:7rem;
+    right:7rem;
    }
-  .block_3-titreGeoride{
-      font-size: 10em;
-  }
+   .block_3-contenu{
+       padding:8rem 0 0 8rem;
+   }
+   .block_3-texte{
+        max-width:40%;
+   }
   #block_4{
       height: 40vh;
       display: flex;
@@ -493,6 +647,16 @@ footer{
     }
     #slider_ul>li{
         width: 30%;
+    }
+    .section_footer{
+        width:25%;
+        padding: 1rem 0;
+    }
+    .span_display{
+        display: none;
+    }
+    .span_desktop{
+        display:block;
     }
 }
 
